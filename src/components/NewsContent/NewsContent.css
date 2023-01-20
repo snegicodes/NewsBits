@@ -1,0 +1,42 @@
+.content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.downloadMessage{
+    border-radius: 0.1rem;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    background: #1e1e1e ;
+    height: 2.5em;
+    padding: 0.2rem 2em;
+    margin: 1em 0 2em 0;
+    color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    -o-border-radius: 0.1rem;
+}
+.downloadText{
+    flex:1;
+}
+
+
+@media (max-width: 768px){
+    .downloadMessage{
+        display: none;
+    }
+}
+
+.loadMore{
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) ;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    margin-top: -20px;
+}

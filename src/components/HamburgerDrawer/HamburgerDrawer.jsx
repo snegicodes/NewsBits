@@ -6,15 +6,20 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+// import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import MailIcon from "@mui/icons-material/Mail";
+// import ListItemIcon from "@mui/material/ListItemIcon";
 
-export default function SwipeableTemporaryDrawer() {
+//Our Imports
+
+import "./HamburgerDrawer.css";
+import categories from "../../data/category";
+
+export default function SwipeableTemporaryDrawer({ setCategory }) {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -51,25 +56,20 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemText primary="CATEGORIES" />
+          </ListItemButton>
+        </ListItem>
       </List>
-      <Divider />
+      <Divider style={{ width: 140 }} />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {categories.map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+            <ListItemButton
+              className="list-button"
+              onClick={() => setCategory(text.toLowerCase())}
+            >
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -90,6 +90,9 @@ export default function SwipeableTemporaryDrawer() {
             open={state["left"]}
             onClose={toggleDrawer("left", false)}
             onOpen={toggleDrawer("left", true)}
+            PaperProps={{
+              sx: { width: "200px", paddingLeft: 3, paddingRight: 2 },
+            }}
           >
             {list("left")}
           </SwipeableDrawer>
