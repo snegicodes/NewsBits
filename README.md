@@ -1,5 +1,11 @@
 # NewsBits - The News App
+<ul>
+  <li>A simple news app inspired from the <em><strong> Inshorts </strong> </em> app that provides short and crisp news. </li>
+  <li>It also allows you to sort and read news of a particular category.</li>
+  <li>It is built using ReactJS. </li>
+</ul>
 A simple news app inspired from the Inshorts app that provides short and crisp news. 
+### <em>  🚫 The NewsAPI only works on localhost because it does not permit service on production servers.  🚫</em>
 
 ## Demo Screenshot
 
