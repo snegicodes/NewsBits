@@ -11,7 +11,7 @@ function App() {
   const [newsResults, setNewsResults] = useState();
   const [loadMore, setLoadMore] = useState(20);
 
-  console.log(process.env);
+  // console.log(process.env);
 
   const newsApi = async () => {
     try {
@@ -27,7 +27,7 @@ function App() {
     }
   };
 
-  console.log(newsArray);
+  // console.log(newsArray);
 
   useEffect(() => {
     newsApi();
