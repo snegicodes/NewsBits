@@ -4,7 +4,6 @@
   <li>It also allows you to sort and read news of a particular category.</li>
   <li>It is built using ReactJS. </li>
 </ul>
-A simple news app inspired from the Inshorts app that provides short and crisp news. 
 </br>
 
 ### NOTE
