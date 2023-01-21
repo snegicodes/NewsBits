@@ -5,7 +5,10 @@
   <li>It is built using ReactJS. </li>
 </ul>
 A simple news app inspired from the Inshorts app that provides short and crisp news. 
-### <em>  🚫 The NewsAPI only works on localhost because it does not permit service on production servers.  🚫</em>
+</br>
+
+### NOTE
+<em> 🚫 The NewsAPI only works on localhost because it does not permit service on production servers.  🚫</em>
 
 ## Demo Screenshot
 
